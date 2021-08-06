@@ -39,7 +39,7 @@ public class SnakeNLadder
                         playerPosition -= playerDiceNumber;
                     else {
                         playerPosition = 0;
-                        System.out.println("Game Resets, Player restarts from Position: 0");
+                        System.out.println("Game Restarts, Player resets to position: 0");
                     }
                     break;
             }
