@@ -8,7 +8,7 @@ package org.example;
  * Snake:Move backward(position reset to 0 if position becomes <0)
  * Game repeats until player reaches wining position(100) exactly
  * and displays number of times player rolls dice to win the game
- * Two players can play to check for winner
+ * Two players can play to check for winner and player can replay for ladder option
  */
 public class SnakeNLadder
 {
