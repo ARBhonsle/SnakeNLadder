@@ -12,8 +12,10 @@ public class SnakeNLadder
 {
     public static void main( String[] args ) {
         System.out.println("Welcome to Snake and Ladder Game");
+        //variables
         final int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WIN_POSITION = 100;
         int playerPosition = 0,playerDiceNumber,playerOption;
+
         System.out.println("Player starts at Position: " + playerPosition);
         while (playerPosition < WIN_POSITION) {
             playerDiceNumber = ((int) (Math.floor(Math.random() * 10)) % 6) + 1;
