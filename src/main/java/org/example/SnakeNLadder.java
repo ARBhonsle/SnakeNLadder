@@ -6,7 +6,7 @@ package org.example;
  * assigned play options(No-play,Ladder,Snake) which moves player position accordingly
  * ie,No-play:no change,Ladder:Move forward,
  * Snake:Move backward(position reset to 0 if position becomes <0)
- * Game repeats until player reaches wining position(100) *
+ * Game repeats until player reaches wining position(100) exactly
  */
 public class SnakeNLadder
 {
@@ -27,18 +27,23 @@ public class SnakeNLadder
                     break;
                 case LADDER:
                     System.out.println("Ladder");
-                    playerPosition += playerDiceNumber;
+                    if((WIN_POSITION-playerDiceNumber)>=playerPosition)
+                        playerPosition += playerDiceNumber;
+                    else
+                        System.out.println("Proper dice value required to win the game");
                     break;
                 case SNAKE:
                     System.out.println("Snake");
                     if(playerPosition>playerDiceNumber)
                         playerPosition -= playerDiceNumber;
-                    else
-                        playerPosition=0;
+                    else {
+                        playerPosition = 0;
+                        System.out.println("Game Resets, Player restarts from Position: 0");
+                    }
                     break;
             }
             System.out.println("Player position: " + playerPosition);
         }
-        System.out.println("Player wins game!");
+        System.out.println("Player wins the game!");
     }
 }
