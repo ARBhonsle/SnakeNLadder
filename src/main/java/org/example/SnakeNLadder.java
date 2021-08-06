@@ -21,6 +21,7 @@ public class SnakeNLadder
             playerDiceNumber = ((int) (Math.floor(Math.random() * 10)) % 6) + 1;
             playerOption = (int) (Math.floor(Math.random() * 10)) % 3;
             System.out.println("Player rolled dice value : " + playerDiceNumber);
+
             switch (playerOption) {
                 case NO_PLAY:
                     System.out.println("No Play");
