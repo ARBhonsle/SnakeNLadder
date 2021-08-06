@@ -1,8 +1,7 @@
 package org.example;
 
 /**
- * Hello world!
- *
+ * Snake and Ladder game where player starts at 0 position
  */
 public class SnakeNLadder
 {
