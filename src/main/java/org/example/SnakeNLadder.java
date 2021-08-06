@@ -7,6 +7,7 @@ package org.example;
  * ie,No-play:no change,Ladder:Move forward,
  * Snake:Move backward(position reset to 0 if position becomes <0)
  * Game repeats until player reaches wining position(100) exactly
+ * and displays number of times player rolls dice to win the game
  */
 public class SnakeNLadder
 {
@@ -14,11 +15,12 @@ public class SnakeNLadder
         System.out.println("Welcome to Snake and Ladder Game");
         //variables
         final int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WIN_POSITION = 100;
-        int playerPosition = 0,playerDiceNumber,playerOption;
+        int playerPosition = 0,playerDiceNumber,playerOption,numberOfDiceRolls=0;
 
         System.out.println("Player starts at Position: " + playerPosition);
         while (playerPosition < WIN_POSITION) {
             playerDiceNumber = ((int) (Math.floor(Math.random() * 10)) % 6) + 1;
+            numberOfDiceRolls+=1;
             playerOption = (int) (Math.floor(Math.random() * 10)) % 3;
             System.out.println("Player rolled dice value : " + playerDiceNumber);
 
@@ -46,5 +48,6 @@ public class SnakeNLadder
             System.out.println("Player position: " + playerPosition);
         }
         System.out.println("Player wins the game!");
+        System.out.println("Player rolled the dice "+numberOfDiceRolls+" times to win the game");
     }
 }
